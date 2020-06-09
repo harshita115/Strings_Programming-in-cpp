@@ -1,0 +1,16 @@
+A program in C++ to input a string and print it.
+Enter the string : Welcome to String
+The string is : Welcome to String
+
+************************************************************************
+
+#include<iostream>
+#include<string.h>
+int main()
+{
+	char a[100];
+	std::cout<<"Enter the string : ";
+	gets(a);
+	std::cout<<"The string is : "<<a;
+	return 0;
+}
