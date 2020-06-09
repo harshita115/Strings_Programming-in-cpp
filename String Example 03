@@ -1,0 +1,21 @@
+A program in C++ to separate the individual characters from a string.
+Enter a string : String
+The characters of this string are : S t r i n g
+
+***********************************************************************************
+
+#include<iostream>
+#include<string>
+int main()
+{
+	int i;
+	char a[100];
+	std::cout<<"Enter a string : ";
+	gets(a);
+	std::cout<<"The characters of this string are : ";
+	for(i=0; a[i] != '\0' ;i++)
+	{
+		std::cout<<a[i]<<" ";
+	}
+	return 0;
+}
