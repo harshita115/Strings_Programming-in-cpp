@@ -1,0 +1,48 @@
+A program in C++ to read a string through keyboard and sort it using bubble sort.
+Enter the strings : 
+apple 
+mango
+banana
+cheeku
+cherry
+The sorted order of strings is :
+apple
+banana
+cheeku
+cherry
+mango
+
+************************************************************************************8
+
+#include<iostream>
+#include<string.h>
+int main()
+{
+	char a[100][100], temp[100];
+	int i, j, n;
+	std::cout<<"Enter the number of elements to be inserted : ";
+	std::cin>>n;
+	std::cout<<"Enter the strings : ";
+	for(i=0; i<=n; i++)
+	{
+		gets(a[i]);
+	}
+	for(i=0; i<=n; i++)
+	{
+		for(j=i+1; j<=n; j++)
+		{
+			if(strcmp(a[i],a[j])>0)
+			{
+				strcpy(temp, a[i]);
+				strcpy(a[i], a[j]);
+				strcpy(a[j], temp);
+			}
+		}
+	}
+	std::cout<<"The sorted order of strings is : "<<std::endl;
+	for(i=0;i<=n;i++)
+	{
+		std::cout<<a[i]<<std::endl;
+	}
+	return 0;
+}
