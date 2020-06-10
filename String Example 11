@@ -1,0 +1,28 @@
+A C++ program to sort a string array in ascending order.
+Enter a string : welcome
+ceelmow
+
+*************************************************************
+
+#include<iostream>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	int h[26]={0}, i, j, max;
+	char a[100],res;
+	std::cout<<"Enter a string : ";
+	gets(a);
+	for(i=0; a[i]!='\0' ; i++)
+	{
+		h[a[i]-97]++;
+	}
+	for(i=0;i<26;i++)
+	{
+		for(j=0; j<h[i]; j++)
+		{
+			std::cout<<(char)(i+97);
+		}
+	}
+	return 0;
+}
