@@ -1,0 +1,38 @@
+A program in C to compare two string without using string library functions.
+Enter first string : Painting
+Enter second string : Painter
+Painting is greater.
+
+*****************************************************************************************
+
+#include<iostream>
+#include<string.h>
+int main()
+{
+	int i,j;
+	char a[100], b[100];
+	std::cout<<"Enter first string : ";
+	gets(a);
+	std::cout<<"Enter second string : ";
+	gets(b);
+	for(i=0,j=0;a[i]!='\0' && b[j]!='\0';i++,j++)
+	{
+		if(a[i]!=b[j])
+		{
+			break;
+		}
+	}
+	if(a[i]==b[j])
+	{
+		std::cout<<"Both strings are equal.";
+	}
+	else if(a[i]<b[j])
+	{
+		std::cout<<a<<" is smaller.";
+	}
+	else
+	{
+		std::cout<<a<<" is greater.";
+	}
+	return 0;
+}
