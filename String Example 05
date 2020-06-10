@@ -1,0 +1,24 @@
+A program in C++ to count the total number of words in a string.
+Enter a string : Coding is Fun!!
+Number Of Words Are : 3
+
+***************************************************************************************************
+
+#include<iostream>
+#include<string.h>
+int main()
+{
+	int i,word=1;
+	char a[100];
+	std::cout<<"Enter a string : ";
+	gets(a);
+	for(i=0; a[i]!='\0';i++)
+	{
+		if(a[i]==' ' && a[i-1]!=' ')
+		{
+			word++;
+		}
+	}
+	std::cout<<" Number Of Words Are : "<<word;
+	return 0;
+}
