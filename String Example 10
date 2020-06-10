@@ -1,0 +1,32 @@
+A program in C++ to find maximum occurring character in a string.
+Enter a string : Hello
+The Maximum occurred element is : l
+The occurrance is : 2
+
+*******************************************************************************
+
+#include<iostream>
+#include<string.h>
+int main()
+{
+	int i, freq[256] = {0}, len, max=0;
+	char a[100], result;
+	std::cout<<"Enter a string : ";
+	gets(a);
+	len = strlen(a);
+	for(i=0; i<len ;i++)
+	{
+		freq[a[i]]++;
+	}
+	for(i=0; i<len; i++)
+	{
+		if(max < freq[a[i]])
+		{
+			max = freq[a[i]];
+			result = a[i];
+		}
+	}
+	std::cout<<"The Maximum occurred element is : "<<result<<std::endl;
+	std::cout<<"The occurrance is : "<<max;
+	return 0;
+}
