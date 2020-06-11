@@ -1,48 +1,34 @@
-A program in C++ to read a string through keyboard and sort it using bubble sort.
-Enter the strings : 
-apple 
-mango
-banana
-cheeku
-cherry
-The sorted order of strings is :
-apple
-banana
-cheeku
-cherry
-mango
-
-************************************************************************************8
+A program in C++ to extract a substring from a given string.
+Enter a string : This is a main string.
+Enter the starting location of the substring : 7
+Enter the length of the substring : 5
+ a ma
+ 
+************************************************************************************
 
 #include<iostream>
 #include<string.h>
 int main()
 {
-	char a[100][100], temp[100];
-	int i, j, n;
-	std::cout<<"Enter the number of elements to be inserted : ";
-	std::cin>>n;
-	std::cout<<"Enter the strings : ";
-	for(i=0; i<=n; i++)
+	char a[100], b[100];
+	int i, j, len, loc, slen;
+	std::cout<<"Enter a string : ";
+	gets(a);
+	len = strlen(a);
+	std::cout<<"Enter the starting location of the substring : ";
+	std::cin>>loc;
+	std::cout<<"Enter the length of the substring : ";
+	std::cin>>slen;
+	i=loc;
+	for(j=0; a[i]!='\0' && slen>0; i++, j++)
 	{
-		gets(a[i]);
+		b[j]=a[i];
+		slen--;
 	}
-	for(i=0; i<=n; i++)
+	b[j]='\0';
+	for(i=0;b[i]!='\0';i++)
 	{
-		for(j=i+1; j<=n; j++)
-		{
-			if(strcmp(a[i],a[j])>0)
-			{
-				strcpy(temp, a[i]);
-				strcpy(a[i], a[j]);
-				strcpy(a[j], temp);
-			}
-		}
-	}
-	std::cout<<"The sorted order of strings is : "<<std::endl;
-	for(i=0;i<=n;i++)
-	{
-		std::cout<<a[i]<<std::endl;
+		std::cout<<b[i];
 	}
 	return 0;
 }
