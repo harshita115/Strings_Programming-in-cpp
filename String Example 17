@@ -1,0 +1,24 @@
+A program in C++ to replace the spaces of a string with a specific character.
+Enter a string : This is a string.
+Output : This*is*a*string.
+
+*********************************************************************************
+
+#include<iostream>
+#include<string.h>
+int main()
+{
+	char a[100], ch;
+	int n,i;
+	std::cout<<"Enter a string : ";
+	gets(a);
+	for(i=0; a[i]!='\0'; i++)
+	{
+		if(a[i]==' ')
+		{
+			a[i]='*';
+		}
+	}
+	std::cout<<"Output : "<<a;
+	return 0;
+}
