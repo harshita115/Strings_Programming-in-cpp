@@ -10,6 +10,7 @@ int main()
 {
 	char a[100];
 	std::cout<<"Enter the string : ";
+	//Taking user input
 	gets(a);
 	std::cout<<"The string is : "<<a;
 	return 0;
