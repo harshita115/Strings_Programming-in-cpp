@@ -15,3 +15,7 @@ int main()
 	std::cout<<"The string is : "<<a;
 	return 0;
 }
+
+Output is :
+Enter the string : Hacktoberfest is fun.
+The string is : Hacktoberfest is fun.
