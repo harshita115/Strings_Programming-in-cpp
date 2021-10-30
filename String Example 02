@@ -1,6 +1,5 @@
 A program in C++ to find the length of a string without using library function.
-Enter a string : String
-Length of the string is : 6
+
 
 ***********************************************************************************
 
@@ -17,3 +16,8 @@ int main()
 	std::cout<<"Length of the string is : "<<i;
 	return 0;
 }
+
+
+Output:
+Enter a string : String
+Length of the string is : 6
